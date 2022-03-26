@@ -66,6 +66,7 @@ fs.readdir("./events/client/", (err, files) => {
 /* ---------- COMMAND HANDLER CONFIGURATION ---------- */
 client.on("message", async (message) => {
     let isBlacklisted;
+    if (!message.guild) return;
     let guildPrefs = await guildModel.findOne({ GuildID: message.guild.id }).catch(err => console.log(err));
 
     if (!guildPrefs) {
@@ -78,7 +79,13 @@ client.on("message", async (message) => {
         console.log(`BOT LOG: [DATA HANDLER] Sucessfully made data for ${message.guild.id}.`);
     };
     const PREFIX = guildPrefs.Prefix;
-    if (message.author.bot || message.channel.type === "dm" || message.channel.type === "group") return;
+    if (message.author.bot || message.channel.type === "dm" || message.channel.type === "group") {
+        return;
+    }
+
+    if (message.mentions.has(client.user)) {
+        message.reply(`Hi! My prefix is **${PREFIX}**`);
+    }
 
     const blacklisted = await blacklistModel.find();
     if (blacklisted) {
