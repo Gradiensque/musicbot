@@ -1,12 +1,12 @@
 {
-    "TOKEN": "",
+    "TOKEN": "OTE5MDUyNDM0NTAyOTc5NjI0.YbQMRw.NOGQfS7ujfGFssjFqtN2qiOnCBY",
     "SOUNDCLOUD_CLIENT_ID": "",
-    "SPOTIFY_CLIENT_ID": "",
-    "SPOTIFY_SECRET_ID": "",
-    "MONGODB_URI": "",
-    "MAX_PLAYLIST_SIZE": 20,
-    "DEFAULTPREFIX": "!",
+    "SPOTIFY_CLIENT_ID": "10ae9a5daad246018e9e1eb7b04e973e",
+    "SPOTIFY_SECRET_ID": "13b14cdfeb5e429a8096fcec7f640812",
+    "MONGODB_URI": "mongodb+srv://west:Anjing90@cluster0.bccch.mongodb.net/mgs",
+    "MAX_PLAYLIST_SIZE": 999,
+    "DEFAULTPREFIX": "k.",
     "PRUNING": true,
     "STAY_TIME": 30,
-    "DEFAULT_VOLUME": 50
+    "DEFAULT_VOLUME": 100
 }
